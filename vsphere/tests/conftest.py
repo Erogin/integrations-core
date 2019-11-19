@@ -1,47 +1,45 @@
-# (C) Datadog, Inc. 2018
-# All rights reserved
-# Licensed under Simplified BSD License (see LICENSE)
-import mock
+import os
+
 import pytest
+from mock import Mock, patch
 
-from datadog_checks.vsphere import VSphereCheck
-
-from .utils import disable_thread_pool, get_mocked_server
-
-
-def _instance():
-    """
-    Create a default instance, used by multiple fixtures
-    """
-    return {'name': 'vsphere_mock', 'tags': ['foo:bar']}
+HERE = os.path.abspath(os.path.dirname(__file__))
 
 
-@pytest.fixture
-def instance():
-    """
-    Return a default instance
-    """
-    return _instance()
+@pytest.fixture()
+def realtime_instance():
+    return {
+        'collection_level': 4,
+        'empty_default_hostname': True,
+        'use_legacy_check_version': False,
+        'host': os.environ.get('VSPHERE_URL', 'FAKE'),
+        'username': os.environ.get('VSPHERE_USERNAME', 'FAKE'),
+        'password': os.environ.get('VSPHERE_PASSWORD', 'FAKE'),
+        'ssl_verify': False,
+    }
 
 
-@pytest.fixture
-def vsphere():
-    """
-    Provide a check instance with mocked parts
-    """
-    # mock the server
-    server_mock = get_mocked_server()
-    # create a check instance
-    check = VSphereCheck('vsphere', {}, {}, [_instance()])
-    # patch the check instance
-    check._get_server_instance = mock.MagicMock(return_value=server_mock)
-    # return the check after disabling the thread pool
-    return disable_thread_pool(check)
+@pytest.fixture()
+def historical_instance():
+    return {
+        'collection_level': 1,
+        'empty_default_hostname': True,
+        'use_legacy_check_version': False,
+        'host': os.environ.get('VSPHERE_URL', 'FAKE'),
+        'username': os.environ.get('VSPHERE_USERNAME', 'FAKE'),
+        'password': os.environ.get('VSPHERE_PASSWORD', 'FAKE'),
+        'ssl_verify': False,
+        'collection_type': 'historical',
+    }
 
 
 @pytest.fixture
-def aggregator():
-    from datadog_checks.stubs import aggregator
-
-    aggregator.reset()
-    return aggregator
+def mock_type():
+    with patch('datadog_checks.vsphere.cache.type') as cache_type, patch(
+        'datadog_checks.vsphere.utils.type'
+    ) as utils_type, patch('datadog_checks.vsphere.vsphere.type') as vsphere_type:
+        new_type_function = lambda x: x.__class__ if isinstance(x, Mock) else type(x)  # noqa: E731
+        cache_type.side_effect = new_type_function
+        utils_type.side_effect = new_type_function
+        vsphere_type.side_effect = new_type_function
+        yield
