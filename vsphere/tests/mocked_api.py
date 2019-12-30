@@ -5,8 +5,7 @@ from datetime import datetime
 from mock import MagicMock
 from pyVmomi import vim
 from six import iteritems
-
-from .conftest import HERE
+from tests.common import HERE
 
 
 class MockedCounter(object):

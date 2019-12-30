@@ -8,6 +8,7 @@ from pyVim import connect
 from pyVmomi import vim, vmodl  # pylint: disable=E0611
 
 from datadog_checks.base import ensure_unicode, is_affirmative
+from datadog_checks.base.checks.libs.timer import Timer
 from datadog_checks.vsphere.constants import ALL_RESOURCES, DEFAULT_BATCH_COLLECTOR_SIZE, DEFAULT_MAX_QUERY_METRICS
 
 
@@ -45,10 +46,6 @@ class VSphereAPI(object):
         self._conn = None
         self.smart_connect()
 
-    @smart_retry
-    def check_health(self):
-        self._conn.CurrentTime()
-
     def smart_connect(self):
         """Creates the connection object to the vSphere API using parameters supplied from the configuration.
         """
@@ -71,6 +68,10 @@ class VSphereAPI(object):
             raise APIConnectionError(err_msg)
 
         self._conn = conn
+
+    @smart_retry
+    def check_health(self):
+        self._conn.CurrentTime()
 
     @smart_retry
     def get_perf_counter_by_level(self, collection_level):
@@ -145,9 +146,15 @@ class VSphereAPI(object):
         return infrastructure_data
 
     @smart_retry
-    def query_metrics(self, query_specs):
+    def query_metrics(self, query_specs, timeit=False):
+        if timeit:
+            t0 = Timer()
         perf_manager = self._conn.content.perfManager
-        return perf_manager.QueryPerf(query_specs)
+        values = perf_manager.QueryPerf(query_specs)
+        if timeit:
+            return values, t0.total()
+        else:
+            return values
 
     @smart_retry
     def get_new_events(self, start_time):

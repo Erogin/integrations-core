@@ -64,11 +64,10 @@ def test_metrics_metadata_cache():
         assert cache.get_metadata(k) == v
 
 
-@patch('datadog_checks.vsphere.cache.type')
-def test_infrastructure_cache(mocked_type):
-    mocked_type.side_effect = lambda x: x.mocked_spec if hasattr(x, 'mocked_spec') else type(x)
+@pytest.mark.usefixtures("mock_type")
+def test_infrastructure_cache():
     cache = InfrastructureCache(float('inf'))
-    mors = {MagicMock(mocked_spec=k): object() for k in ALL_RESOURCES_WITH_METRICS * 2}
+    mors = {MagicMock(spec=k): object() for k in ALL_RESOURCES_WITH_METRICS * 2}
     with cache.update():
         for k, v in iteritems(mors):
             cache.set_mor_data(k, v)

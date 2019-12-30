@@ -3,9 +3,10 @@
         "name": "vsphere.cpu.totalmhz.avg",
         "value": 18352.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -14,9 +15,10 @@
         "name": "vsphere.cpu.totalmhz.avg",
         "value": 18352.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -25,9 +27,10 @@
         "name": "vsphere.cpu.totalmhz.avg",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -36,9 +39,10 @@
         "name": "vsphere.cpu.usage.avg",
         "value": 41.1,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -47,9 +51,10 @@
         "name": "vsphere.cpu.usage.avg",
         "value": 41.1,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -58,9 +63,10 @@
         "name": "vsphere.cpu.usagemhz.avg",
         "value": 7544.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -69,9 +75,10 @@
         "name": "vsphere.cpu.usagemhz.avg",
         "value": 7544.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -80,9 +87,10 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 206292664.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -91,11 +99,12 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 41680896.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 1",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -103,11 +112,12 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 41680896.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -115,9 +125,10 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 206292664.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -126,9 +137,10 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 41680896.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 3",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -137,9 +149,10 @@
         "name": "vsphere.disk.capacity.latest",
         "value": 41680896.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 4",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -148,9 +161,10 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 205928464.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -159,11 +173,12 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 24782850.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 1",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -171,11 +186,12 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 24775682.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -183,9 +199,10 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 205928464.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -194,9 +211,10 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 33273858.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 3",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -205,9 +223,10 @@
         "name": "vsphere.disk.provisioned.latest",
         "value": 24776706.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 4",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -216,9 +235,10 @@
         "name": "vsphere.disk.used.latest",
         "value": 46580528.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -227,11 +247,12 @@
         "name": "vsphere.disk.used.latest",
         "value": 24782848.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 1",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -239,11 +260,12 @@
         "name": "vsphere.disk.used.latest",
         "value": 24775680.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Dätacenter",
             "vsphere_datastore:Datastore 2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:datastore",
             "vsphere_folder:Datastores",
+            "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
     },
@@ -251,9 +273,10 @@
         "name": "vsphere.disk.used.latest",
         "value": 46580528.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:NFS Share",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -262,9 +285,10 @@
         "name": "vsphere.disk.used.latest",
         "value": 33273856.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 3",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -273,9 +297,10 @@
         "name": "vsphere.disk.used.latest",
         "value": 24776704.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_datacenter:Datacenter2",
             "vsphere_datastore:Datastore 4",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:datastore",
             "vsphere_type:datastore"
         ]
@@ -284,9 +309,10 @@
         "name": "vsphere.mem.consumed.avg",
         "value": 11201688.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -295,9 +321,10 @@
         "name": "vsphere.mem.consumed.avg",
         "value": 11201688.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -306,9 +333,10 @@
         "name": "vsphere.mem.overhead.avg",
         "value": 69285.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -317,9 +345,10 @@
         "name": "vsphere.mem.overhead.avg",
         "value": 69285.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -328,9 +357,10 @@
         "name": "vsphere.mem.totalmb.avg",
         "value": 9724.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -339,9 +369,10 @@
         "name": "vsphere.mem.totalmb.avg",
         "value": 9724.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -350,9 +381,10 @@
         "name": "vsphere.mem.totalmb.avg",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -361,9 +393,10 @@
         "name": "vsphere.mem.usage.avg",
         "value": 23.09,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -372,9 +405,10 @@
         "name": "vsphere.mem.usage.avg",
         "value": 23.09,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -383,9 +417,10 @@
         "name": "vsphere.mem.vmmemctl.avg",
         "value": 12152832.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -394,9 +429,10 @@
         "name": "vsphere.mem.vmmemctl.avg",
         "value": 12152832.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -405,6 +441,7 @@
         "name": "vsphere.vmop.numChangeDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -414,6 +451,7 @@
         "name": "vsphere.vmop.numChangeDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -423,9 +461,10 @@
         "name": "vsphere.vmop.numChangeDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -434,9 +473,10 @@
         "name": "vsphere.vmop.numChangeDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -445,9 +485,10 @@
         "name": "vsphere.vmop.numChangeDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -456,6 +497,7 @@
         "name": "vsphere.vmop.numChangeHost.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -465,6 +507,7 @@
         "name": "vsphere.vmop.numChangeHost.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -474,20 +517,10 @@
         "name": "vsphere.vmop.numChangeHost.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numChangeHost.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -496,9 +529,22 @@
         "name": "vsphere.vmop.numChangeHost.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numChangeHost.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -507,6 +553,7 @@
         "name": "vsphere.vmop.numChangeHostDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -516,6 +563,7 @@
         "name": "vsphere.vmop.numChangeHostDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -525,20 +573,10 @@
         "name": "vsphere.vmop.numChangeHostDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numChangeHostDS.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -547,9 +585,22 @@
         "name": "vsphere.vmop.numChangeHostDS.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numChangeHostDS.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -558,6 +609,7 @@
         "name": "vsphere.vmop.numClone.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -567,6 +619,7 @@
         "name": "vsphere.vmop.numClone.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -576,20 +629,10 @@
         "name": "vsphere.vmop.numClone.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numClone.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -598,9 +641,22 @@
         "name": "vsphere.vmop.numClone.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numClone.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -609,6 +665,7 @@
         "name": "vsphere.vmop.numCreate.latest",
         "value": 10.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -618,6 +675,7 @@
         "name": "vsphere.vmop.numCreate.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -627,9 +685,10 @@
         "name": "vsphere.vmop.numCreate.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -638,9 +697,10 @@
         "name": "vsphere.vmop.numCreate.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -649,9 +709,10 @@
         "name": "vsphere.vmop.numCreate.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -660,6 +721,7 @@
         "name": "vsphere.vmop.numDeploy.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -669,6 +731,7 @@
         "name": "vsphere.vmop.numDeploy.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -678,20 +741,10 @@
         "name": "vsphere.vmop.numDeploy.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numDeploy.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -700,9 +753,22 @@
         "name": "vsphere.vmop.numDeploy.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numDeploy.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -711,6 +777,7 @@
         "name": "vsphere.vmop.numDestroy.latest",
         "value": 4.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -720,6 +787,7 @@
         "name": "vsphere.vmop.numDestroy.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -729,9 +797,10 @@
         "name": "vsphere.vmop.numDestroy.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -740,9 +809,10 @@
         "name": "vsphere.vmop.numDestroy.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -751,9 +821,10 @@
         "name": "vsphere.vmop.numDestroy.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -762,6 +833,7 @@
         "name": "vsphere.vmop.numPoweroff.latest",
         "value": 8.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -771,6 +843,7 @@
         "name": "vsphere.vmop.numPoweroff.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -780,20 +853,10 @@
         "name": "vsphere.vmop.numPoweroff.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numPoweroff.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -802,9 +865,22 @@
         "name": "vsphere.vmop.numPoweroff.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numPoweroff.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -813,6 +889,7 @@
         "name": "vsphere.vmop.numPoweron.latest",
         "value": 64.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -822,6 +899,7 @@
         "name": "vsphere.vmop.numPoweron.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -831,9 +909,10 @@
         "name": "vsphere.vmop.numPoweron.latest",
         "value": 1.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -842,9 +921,10 @@
         "name": "vsphere.vmop.numPoweron.latest",
         "value": 1.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -853,9 +933,10 @@
         "name": "vsphere.vmop.numPoweron.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -864,6 +945,7 @@
         "name": "vsphere.vmop.numRebootGuest.latest",
         "value": 6.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -873,6 +955,7 @@
         "name": "vsphere.vmop.numRebootGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -882,20 +965,10 @@
         "name": "vsphere.vmop.numRebootGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numRebootGuest.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -904,9 +977,22 @@
         "name": "vsphere.vmop.numRebootGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numRebootGuest.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -915,6 +1001,7 @@
         "name": "vsphere.vmop.numReconfigure.latest",
         "value": 9.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -924,6 +1011,7 @@
         "name": "vsphere.vmop.numReconfigure.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -933,9 +1021,10 @@
         "name": "vsphere.vmop.numReconfigure.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -944,9 +1033,10 @@
         "name": "vsphere.vmop.numReconfigure.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -955,9 +1045,10 @@
         "name": "vsphere.vmop.numReconfigure.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -966,6 +1057,7 @@
         "name": "vsphere.vmop.numRegister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -975,6 +1067,7 @@
         "name": "vsphere.vmop.numRegister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -984,20 +1077,10 @@
         "name": "vsphere.vmop.numRegister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numRegister.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1006,9 +1089,22 @@
         "name": "vsphere.vmop.numRegister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numRegister.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1017,6 +1113,7 @@
         "name": "vsphere.vmop.numReset.latest",
         "value": 2.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1026,6 +1123,7 @@
         "name": "vsphere.vmop.numReset.latest",
         "value": 1.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1035,9 +1133,10 @@
         "name": "vsphere.vmop.numReset.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1046,9 +1145,10 @@
         "name": "vsphere.vmop.numReset.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1057,9 +1157,10 @@
         "name": "vsphere.vmop.numReset.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1068,6 +1169,7 @@
         "name": "vsphere.vmop.numSVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1077,6 +1179,7 @@
         "name": "vsphere.vmop.numSVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1086,20 +1189,10 @@
         "name": "vsphere.vmop.numSVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numSVMotion.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1108,9 +1201,22 @@
         "name": "vsphere.vmop.numSVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numSVMotion.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1119,6 +1225,7 @@
         "name": "vsphere.vmop.numShutdownGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1128,6 +1235,7 @@
         "name": "vsphere.vmop.numShutdownGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1137,20 +1245,10 @@
         "name": "vsphere.vmop.numShutdownGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numShutdownGuest.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1159,9 +1257,22 @@
         "name": "vsphere.vmop.numShutdownGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numShutdownGuest.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1170,6 +1281,7 @@
         "name": "vsphere.vmop.numStandbyGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1179,6 +1291,7 @@
         "name": "vsphere.vmop.numStandbyGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1188,20 +1301,10 @@
         "name": "vsphere.vmop.numStandbyGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numStandbyGuest.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1210,9 +1313,22 @@
         "name": "vsphere.vmop.numStandbyGuest.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numStandbyGuest.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1221,6 +1337,7 @@
         "name": "vsphere.vmop.numSuspend.latest",
         "value": 16.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1230,6 +1347,7 @@
         "name": "vsphere.vmop.numSuspend.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1239,20 +1357,10 @@
         "name": "vsphere.vmop.numSuspend.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numSuspend.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1261,9 +1369,22 @@
         "name": "vsphere.vmop.numSuspend.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numSuspend.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1272,6 +1393,7 @@
         "name": "vsphere.vmop.numUnregister.latest",
         "value": 5.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1281,6 +1403,7 @@
         "name": "vsphere.vmop.numUnregister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1290,20 +1413,10 @@
         "name": "vsphere.vmop.numUnregister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numUnregister.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1312,9 +1425,22 @@
         "name": "vsphere.vmop.numUnregister.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numUnregister.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1323,6 +1449,7 @@
         "name": "vsphere.vmop.numVMotion.latest",
         "value": 178.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1332,6 +1459,7 @@
         "name": "vsphere.vmop.numVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1341,20 +1469,10 @@
         "name": "vsphere.vmop.numVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numVMotion.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1363,9 +1481,22 @@
         "name": "vsphere.vmop.numVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numVMotion.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1374,6 +1505,7 @@
         "name": "vsphere.vmop.numXVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Dätacenter",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1383,6 +1515,7 @@
         "name": "vsphere.vmop.numXVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_datacenter:Datacenter2",
             "vsphere_folder:Datacenters",
             "vsphere_type:datacenter"
@@ -1392,20 +1525,10 @@
         "name": "vsphere.vmop.numXVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:Cluster2",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Dätacenter",
-            "vsphere_folder:host",
-            "vsphere_type:cluster"
-        ]
-    },
-    {
-        "name": "vsphere.vmop.numXVMotion.latest",
-        "value": 0.0,
-        "tags": [
-            "vsphere_cluster:Cluster2",
             "vsphere_folder:Datacenters",
-            "vsphere_datacenter:Datacenter2",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
@@ -1414,11 +1537,33 @@
         "name": "vsphere.vmop.numXVMotion.latest",
         "value": 0.0,
         "tags": [
+            "vcenter_server:FAKE",
+            "vsphere_cluster:Cluster2",
+            "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
+            "vsphere_folder:host",
+            "vsphere_type:cluster"
+        ]
+    },
+    {
+        "name": "vsphere.vmop.numXVMotion.latest",
+        "value": 0.0,
+        "tags": [
+            "vcenter_server:FAKE",
             "vsphere_cluster:datastore-cluster",
-            "vsphere_folder:Datacenters",
             "vsphere_datacenter:Datacenter2",
+            "vsphere_folder:Datacenters",
             "vsphere_folder:host",
             "vsphere_type:cluster"
         ]
+    },
+    {
+        "name": "datadog.vsphere.query_metrics.time"
+    },
+    {
+        "name": "datadog.vsphere.refresh_metrics_metadata_cache.time"
+    },
+    {
+        "name": "datadog.vsphere.refresh_infrastructure_cache.time"
     }
 ]

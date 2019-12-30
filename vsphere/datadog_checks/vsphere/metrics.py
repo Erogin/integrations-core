@@ -207,6 +207,8 @@ VM_METRICS = {
     'net.multicastTx.sum': (2, 3, True),
     'net.packetsRx.sum': (2, 3, True),
     'net.packetsTx.sum': (2, 3, True),
+    'net.pnicBytesRx.avg': (4, 4, True),
+    'net.pnicBytesTx.avg': (4, 4, True),
     'net.received.avg': (2, 3, True),
     'net.transmitted.avg': (2, 3, True),
     'net.usage.avg': (1, 3, True),
@@ -584,11 +586,12 @@ DATACENTER_METRICS = {
 # (collection_level, per_instance_collection_level, (optional)is_available_per_instance)
 CLUSTER_METRICS = {
     # clusterServices are only available for DRS and HA clusters, and are causing errors. Let's deactivate for now
-    # 'clusterServices.cpufairness.latest': (1, 3),
-    # 'clusterServices.effectivecpu.avg': (1, 3),
-    # 'clusterServices.effectivemem.avg': (1, 3),
-    # 'clusterServices.failover.latest': (1, 3),
-    # 'clusterServices.memfairness.latest': (1, 3),
+    # but they were collected before so investigate why
+    'clusterServices.cpufairness.latest': (1, 3),
+    'clusterServices.effectivecpu.avg': (1, 3),
+    'clusterServices.effectivemem.avg': (1, 3),
+    'clusterServices.failover.latest': (1, 3),
+    'clusterServices.memfairness.latest': (1, 3),
     'cpu.totalmhz.avg': (1, 3),
     'cpu.usage.avg': (1, 3, True),
     'cpu.usagemhz.avg': (1, 3),

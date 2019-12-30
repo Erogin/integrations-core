@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
+import pytest
 from pyVmomi import vim
 from tests.mocked_api import MockedAPI
 
@@ -49,7 +50,8 @@ def test_make_inventory_path():
     assert make_inventory_path(grandchild1, infrastructure_data) == '/child1/grandchild1'
 
 
-def test_is_realtime_resource_excluded_by_filters(realtime_instance, mock_type):
+@pytest.mark.usefixtures("mock_type")
+def test_is_realtime_resource_excluded_by_filters(realtime_instance):
     realtime_instance['resource_filters'] = [
         {'resource': 'vm', 'property': 'name', 'patterns': [r'^\$VM5$', r'^VM4-2\d$']},
         {'resource': 'vm', 'property': 'inventory_path', 'patterns': [r'\/Dätacenter\/vm\/m.*']},
