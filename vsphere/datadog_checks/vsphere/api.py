@@ -8,7 +8,6 @@ from pyVim import connect
 from pyVmomi import vim, vmodl  # pylint: disable=E0611
 
 from datadog_checks.base import ensure_unicode, is_affirmative
-from datadog_checks.base.checks.libs.timer import Timer
 from datadog_checks.vsphere.constants import ALL_RESOURCES, DEFAULT_BATCH_COLLECTOR_SIZE, DEFAULT_MAX_QUERY_METRICS
 
 
@@ -146,15 +145,10 @@ class VSphereAPI(object):
         return infrastructure_data
 
     @smart_retry
-    def query_metrics(self, query_specs, timeit=False):
-        if timeit:
-            t0 = Timer()
+    def query_metrics(self, query_specs):
         perf_manager = self._conn.content.perfManager
         values = perf_manager.QueryPerf(query_specs)
-        if timeit:
-            return values, t0.total()
-        else:
-            return values
+        return values
 
     @smart_retry
     def get_new_events(self, start_time):

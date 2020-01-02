@@ -50,10 +50,7 @@ class MetricsMetadataCache(VSphereCache):
 
     _content = {
         vim.HostSystem: {
-            <COUNTER_KEY>: {
-                name: <DD_METRIC_NAME>,
-                unit: <METRIC_UNIT>
-            },
+            <COUNTER_KEY>: <DD_METRIC_NAME>,
             ...
         },
         vim.VirtualMachine: {...},
@@ -74,9 +71,9 @@ class InfrastructureCache(VSphereCache):
 
     _content = {
         vim.VirtualMachine: {
-            <MOR_REFERENCE>: <MOR_PROPS>
-        }
-
+            <MOR_REFERENCE>: <MOR_PROPS_DICT>
+        },
+        ...
     }
     """
 

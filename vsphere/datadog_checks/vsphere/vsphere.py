@@ -56,7 +56,6 @@ class VSphereCheck(AgentCheck):
         AgentCheck.__init__(self, name, init_config, instances)
         # Configuration fields
         self.base_tags = self.instance.get("tags", [])
-        self.base_tags.append("vcenter_server:{}".format(self.instance['host']))
         self.collection_level = self.instance.get("collection_level", 1)
         self.collection_type = self.instance.get("collection_type", "realtime")
         self.resource_filters = self.instance.get("resource_filters", {})
@@ -83,6 +82,8 @@ class VSphereCheck(AgentCheck):
         self.validate_and_format_config()
         self.api = None
         self.check_initializations.append(self.initiate_connection)
+
+        self.base_tags.append("vcenter_server:{}".format(self.instance['host']))
 
     def validate_and_format_config(self):
         """Validate that the config is correct and transform resource filters into a more manageable object."""
@@ -251,7 +252,6 @@ class VSphereCheck(AgentCheck):
 
     def submit_metrics_callback(self, task):
         """Callback of the collection of metrics. This is run in the main thread!"""
-        # TODO better exception handling of the Future
         try:
             results = task.result()
         except Exception as e:
@@ -366,7 +366,6 @@ class VSphereCheck(AgentCheck):
                     tasks.append(pool_executor.submit(lambda q: self.query_metrics_wrapper(q), query_specs))
 
         self.log.info("Queued all %d tasks, waiting for completion.", len(tasks))
-        # TODO: ugly but works
         while tasks:
             finished_tasks = [t for t in tasks if t.done()]
             if not finished_tasks:
@@ -465,7 +464,7 @@ class VSphereCheck(AgentCheck):
         except Exception:
             self.log.error("The vCenter API is not responding. The check will not run.")
             self.service_check(SERVICE_CHECK_NAME, AgentCheck.CRITICAL, tags=self.base_tags, hostname=None)
-            return
+            raise
         else:
             self.service_check(SERVICE_CHECK_NAME, AgentCheck.OK, tags=self.base_tags, hostname=None)
 
