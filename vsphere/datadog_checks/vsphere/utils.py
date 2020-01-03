@@ -1,10 +1,6 @@
 # (C) Datadog, Inc. 2019
 # All rights reserved
 # Licensed under Simplified BSD License (see LICENSE)
-import sys
-from gc import get_referents
-from types import FunctionType, ModuleType
-
 from pyVmomi import vim
 
 from datadog_checks.base import ensure_unicode
