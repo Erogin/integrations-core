@@ -94,7 +94,7 @@ class VSphereAPI(object):
             ...
         }
         """
-        content = self._conn.content
+        content = self._conn.content  # vim.ServiceInstanceContent reference from the connection
 
         property_specs = []
         # Specify which attributes we want to retrieve per object
