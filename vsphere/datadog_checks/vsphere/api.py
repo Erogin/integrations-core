@@ -8,7 +8,12 @@ from pyVim import connect
 from pyVmomi import vim, vmodl  # pylint: disable=E0611
 
 from datadog_checks.base import ensure_unicode, is_affirmative
-from datadog_checks.vsphere.constants import ALL_RESOURCES, DEFAULT_BATCH_COLLECTOR_SIZE, DEFAULT_MAX_QUERY_METRICS
+from datadog_checks.vsphere.constants import (
+    ALL_RESOURCES,
+    DEFAULT_BATCH_COLLECTOR_SIZE,
+    MAX_QUERY_METRICS_OPTION,
+    UNLIMITED_HIST_METRICS_PER_QUERY,
+)
 
 
 def smart_retry(f):
@@ -165,9 +170,6 @@ class VSphereAPI(object):
 
     @smart_retry
     def get_max_query_metrics(self):
-        vcenter_settings = self._conn.content.setting.QueryOptions("config.vpxd.stats.maxQueryMetrics")
-        try:
-            max_historical_metrics = int(vcenter_settings[0].value)
-            return max_historical_metrics if max_historical_metrics > 0 else float('inf')
-        except Exception:
-            return DEFAULT_MAX_QUERY_METRICS
+        vcenter_settings = self._conn.content.setting.QueryOptions(MAX_QUERY_METRICS_OPTION)
+        max_historical_metrics = int(vcenter_settings[0].value)
+        return max_historical_metrics if max_historical_metrics > 0 else UNLIMITED_HIST_METRICS_PER_QUERY

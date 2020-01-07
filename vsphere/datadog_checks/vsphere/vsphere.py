@@ -22,6 +22,7 @@ from datadog_checks.vsphere.constants import (
     DEFAULT_THREAD_COUNT,
     EXTRA_FILTER_PROPERTIES_FOR_VMS,
     HISTORICAL_RESOURCES,
+    MAX_QUERY_METRICS_OPTION,
     REALTIME_RESOURCES,
 )
 from datadog_checks.vsphere.legacy.event import VSphereEvent
@@ -476,12 +477,19 @@ class VSphereCheck(AgentCheck):
                     self.log.warning(
                         "The integration was configured with `max_query_metrics: %d` but your vCenter has a"
                         "limit of %d which is lower. Ignoring your configuration in favor of the vCenter value."
-                        "To update the vCenter value, please update the `config.vpxd.stats.maxQueryMetrics` field",
+                        "To update the vCenter value, please update the `%s` field",
                         self.max_historical_metrics,
                         vcenter_max_hist_metrics,
+                        MAX_QUERY_METRICS_OPTION,
                     )
                     self.max_historical_metrics = vcenter_max_hist_metrics
             except Exception:
+                self.max_historical_metrics = DEFAULT_MAX_QUERY_METRICS
+                self.log.info(
+                    "Could not fetch the value of %s, setting `max_historical_metrics` to %d.",
+                    MAX_QUERY_METRICS_OPTION,
+                    DEFAULT_MAX_QUERY_METRICS,
+                )
                 pass
 
         # Refresh the metrics metadata cache

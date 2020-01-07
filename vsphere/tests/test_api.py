@@ -3,7 +3,6 @@ from mock import ANY, MagicMock, patch
 from pyVmomi import vim
 
 from datadog_checks.vsphere.api import APIConnectionError, VSphereAPI
-from datadog_checks.vsphere.constants import DEFAULT_MAX_QUERY_METRICS
 
 
 def test_connect_success(realtime_instance):
@@ -81,8 +80,8 @@ def test_smart_retry(realtime_instance):
 def test_get_max_query_metrics(realtime_instance):
     with patch('datadog_checks.vsphere.api.connect'):
         api = VSphereAPI(realtime_instance)
-        values = [12, "string", -1, Exception()]
-        expected = [12, DEFAULT_MAX_QUERY_METRICS, float('inf'), DEFAULT_MAX_QUERY_METRICS]
+        values = [12, -1]
+        expected = [12, float('inf')]
 
         for val, expect in zip(values, expected):
             query_config = MagicMock()
