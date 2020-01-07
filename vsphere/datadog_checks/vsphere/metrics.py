@@ -256,7 +256,7 @@ VM_METRICS = {
     'virtualDisk.writeIOSize.latest': (4, 4, True),
     'virtualDisk.writeLatencyUS.latest': (4, 4, True),
     'virtualDisk.writeLoadMetric.latest': (2, 2, True),
-    'virtualDisk.writeOIO.latest': (2, 2, 'instance'),
+    'virtualDisk.writeOIO.latest': (2, 2, True),
 }
 
 # All metrics that can be collected from ESXi Hosts.
@@ -530,7 +530,7 @@ HOST_METRICS = {
     'sys.resourceMemZero.latest': (3, 3, True),
     'sys.uptime.latest': (1, 3),
     'virtualDisk.busResets.sum': (2, 4, True),
-    'virtualDisk.commandsAborted.sum': (2, 4, 'instance'),
+    'virtualDisk.commandsAborted.sum': (2, 4, True),
 }
 
 # All metrics that can be collected from Datastores.
@@ -552,7 +552,7 @@ DATASTORE_METRICS = {
     'disk.numberWriteAveraged.avg': (1, 3),
     'disk.provisioned.latest': (1, 1, True),
     'disk.unshared.latest': (1, 1, True),
-    'disk.used.latest': (1, 1, 'instance'),
+    'disk.used.latest': (1, 1, True),
 }
 
 # All metrics that can be collected from Datacenters.
@@ -578,7 +578,7 @@ DATACENTER_METRICS = {
     'vmop.numSuspend.latest': (1, 3),
     'vmop.numUnregister.latest': (1, 3),
     'vmop.numVMotion.latest': (1, 3),
-    'vmop.numXVMotion.latest': (1, 3, 'aggregate'),
+    'vmop.numXVMotion.latest': (1, 3),
 }
 
 # All metrics that can be collected from Clusters.
@@ -619,7 +619,7 @@ CLUSTER_METRICS = {
     'vmop.numSuspend.latest': (1, 3),
     'vmop.numUnregister.latest': (1, 3),
     'vmop.numVMotion.latest': (1, 3),
-    'vmop.numXVMotion.latest': (1, 3, 'aggregate'),
+    'vmop.numXVMotion.latest': (1, 3),
 }
 
 ALLOWED_METRICS_FOR_MOR = {

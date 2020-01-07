@@ -17,7 +17,7 @@ def format_metric_name(counter):
 
 def match_any_regex(string, regexes):
     for regex in regexes:
-        match = regex.match(string)  # FIXME: Should we use re.IGNORECASE like legacy?
+        match = regex.match(string)
         if match:
             return True
     return False
@@ -26,8 +26,10 @@ def match_any_regex(string, regexes):
 def is_resource_excluded_by_filters(mor, infrastructure_data, resource_filters):
     resource_type = MOR_TYPE_AS_STRING[type(mor)]
 
-    if not [f for f in resource_filters if f[0] == resource_type]:
-        # No filter for this resource, collect everything
+    for f in resource_filters:
+        if f[0] == resource_type:
+            break
+    else:
         return False
 
     name_filter = resource_filters.get((resource_type, 'name'))
@@ -91,9 +93,9 @@ def get_parent_tags_recursively(mor, infrastructure_data):
     """
     mor_props = infrastructure_data.get(mor)
     parent = mor_props.get('parent')
-    parent_props = infrastructure_data.get(parent, {})
     if parent:
         tags = []
+        parent_props = infrastructure_data.get(parent, {})
         parent_name = ensure_unicode(parent_props.get('name', 'unknown'))
         if isinstance(parent, vim.HostSystem):
             tags.append(u'vsphere_host:{}'.format(parent_name))

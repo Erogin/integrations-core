@@ -1,6 +1,8 @@
 # (C) Datadog, Inc. 2019
 # All rights reserved
 # Licensed under Simplified BSD License (see LICENSE)
+from __future__ import division
+
 import re
 import time
 from collections import defaultdict
@@ -23,6 +25,7 @@ from datadog_checks.vsphere.constants import (
     EXTRA_FILTER_PROPERTIES_FOR_VMS,
     HISTORICAL_RESOURCES,
     MAX_QUERY_METRICS_OPTION,
+    REALTIME_METRICS_INTERVAL_ID,
     REALTIME_RESOURCES,
 )
 from datadog_checks.vsphere.legacy.event import VSphereEvent
@@ -54,7 +57,7 @@ class VSphereCheck(AgentCheck):
         return super(VSphereCheck, cls).__new__(cls)
 
     def __init__(self, name, init_config, instances):
-        AgentCheck.__init__(self, name, init_config, instances)
+        super(VSphereCheck, self).__init__(name, init_config, instances)
         # Configuration fields
         self.base_tags = self.instance.get("tags", [])
         self.collection_level = self.instance.get("collection_level", 1)
@@ -135,7 +138,7 @@ class VSphereCheck(AgentCheck):
             if f['property'] not in allowed_prop_names:
                 self.log.warning(
                     u"Ignoring filter %r because property '%s' is not valid "
-                    "for resource type %s. Should be one of %r.",
+                    u"for resource type %s. Should be one of %r.",
                     f,
                     f['property'],
                     f['resource'],
@@ -166,7 +169,7 @@ class VSphereCheck(AgentCheck):
             self.api = VSphereAPI(self.instance)
             self.log.info("Connected")
         except APIConnectionError:
-            self.log.exception("Cannot authenticate to vCenter API. The check will not run.")
+            self.log.error("Cannot authenticate to vCenter API. The check will not run.")
             self.service_check(SERVICE_CHECK_NAME, AgentCheck.CRITICAL, tags=self.base_tags, hostname=None)
             raise
 
@@ -301,7 +304,7 @@ class VSphereCheck(AgentCheck):
                 value = valid_values[-1]
                 if metric_name in PERCENT_METRICS:
                     # Convert the percentage to a float.
-                    value = float(value) / 100
+                    value /= 100
 
                 tags = []
                 if should_collect_per_instance_values(metric_name, resource_type):
@@ -334,10 +337,8 @@ class VSphereCheck(AgentCheck):
         self.histogram('datadog.vsphere.query_metrics.time', t0.total(), tags=self.base_tags, raw=True)
         return metrics_values
 
-    def collect_metrics(self):
+    def collect_metrics(self, thread_pool):
         """Creates a pool of threads and run the query_metrics calls in parallel."""
-        pool_executor = ThreadPoolExecutor(max_workers=self.threads_count)
-        self.log.info("Starting metric collection in %d threads." % self.threads_count)
         tasks = []
         for resource_type in self.collected_resource_types:
             mors = self.infrastructure_cache.get_mors(resource_type)
@@ -356,7 +357,7 @@ class VSphereCheck(AgentCheck):
                     query_spec.entity = mor
                     query_spec.metricId = metrics
                     if resource_type in REALTIME_RESOURCES:
-                        query_spec.intervalId = 20  # FIXME: Make constant
+                        query_spec.intervalId = REALTIME_METRICS_INTERVAL_ID
                         query_spec.maxSample = 1  # Request a single datapoint
                     else:
                         # We cannot use `maxSample` for historical metrics, let's specify a timewindow that will
@@ -364,7 +365,7 @@ class VSphereCheck(AgentCheck):
                         query_spec.startTime = datetime.now() - timedelta(hours=2)
                     query_specs.append(query_spec)
                 if query_specs:
-                    tasks.append(pool_executor.submit(lambda q: self.query_metrics_wrapper(q), query_specs))
+                    tasks.append(thread_pool.submit(lambda q: self.query_metrics_wrapper(q), query_specs))
 
         self.log.info("Queued all %d tasks, waiting for completion.", len(tasks))
         while tasks:
@@ -373,11 +374,14 @@ class VSphereCheck(AgentCheck):
                 time.sleep(0.1)
                 continue
             for task in finished_tasks:
-                self.submit_metrics_callback(task)
+                try:
+                    self.submit_metrics_callback(task)
+                except Exception:
+                    self.log.exception(
+                        "Exception raised during the submit_metrics_callback. "
+                        "Ignoring the error and continuing execution."
+                    )
                 tasks.remove(task)
-
-        self.log.info("All tasks completed, shutting down the thread pool.")
-        pool_executor.shutdown()
 
     def make_batch(self, mors, metric_ids, resource_type):
         """Iterates over mor and generate batches with a fixed number of metrics to query.
@@ -513,4 +517,11 @@ class VSphereCheck(AgentCheck):
             vm_count = len(self.infrastructure_cache.get_mors(vim.VirtualMachine))
             self.gauge('vm.count', vm_count, tags=self.base_tags, hostname=None)
 
-        self.collect_metrics()
+        # Creating a thread pool and starting metric collection
+        pool_executor = ThreadPoolExecutor(max_workers=self.threads_count)
+        self.log.info("Starting metric collection in %d threads." % self.threads_count)
+        try:
+            self.collect_metrics(pool_executor)
+            self.log.info("All tasks completed, shutting down the thread pool.")
+        finally:
+            pool_executor.shutdown()
